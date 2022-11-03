@@ -9,7 +9,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "tb_event")
@@ -25,7 +24,6 @@ public class Event {
 
 	@ManyToOne
 	@JoinColumn(name = "city_id")
-	@NotNull(message = "Campo requerido")
 	private City city;
 
 	public Event() {
